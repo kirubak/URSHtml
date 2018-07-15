@@ -1,0 +1,314 @@
+﻿		<!--Head Navigation-->
+<div class="head-banner-wrapper">
+    <nav class="navbar navbar-default app-header">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo-wrap" href="#"><img src="../../assets/img/logo.jpg" alt="logo" class="logo-img" /></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right app-nav-wrap">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#contactusId">Contact Us</a></li>
+                    <li><button class="btn btn-default pick-head-btn" type="button" data-toggle="modal" data-target="#oderDetailsModal">Order Here</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="banner-wrap">
+        <img src="../../assets/img/banner.jpg" alt="banner" class="banner-img" />
+        <div class="banner-content">
+            <h1>Urs CHEKKU OIL <span class="head-heart">&#9827;</span> Cold Pressed</h1>
+            <button class="btn btn-default pick-head-btn" type="button" data-toggle="modal" data-target="#oderDetailsModal">Place Your Orders</button>
+        </div>
+    </div>
+</div>
+
+<!-- Order Details Modal -->
+<div class="modal fade" id="oderDetailsModal" tabindex="-1" role="dialog" aria-labelledby="oderDetailsModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title pick-modal-head" id="oderDetailsModalLabel">Place Orders</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="table-responsive app-price-table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>S.No</th>
+                                <th>Product Name</th>
+                                <th>Price per product</th>
+                                <th>quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sesame Oil</td>
+                                <td>&#8377; 360/litter</td>
+                                <td><input class="productValues" id="itemSesame" type="number" min="0" value="0" /></td>
+                                <td>&#8377; <span id="outputitemSesame">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Peanut Oil</td>
+                                <td>&#8377; 270/litter</td>
+                                <td><input class="productValues" id="itemPeanut" type="number" min="0" value="0" /></td>
+                                <td>&#8377; <span id="outputitemPeanut">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Coconut Oil</td>
+                                <td>&#8377; 150/500ml</td>
+                                <td><input class="productValues" id="itemCoconut" type="number" min="0" value="0" /></td>
+                                <td>&#8377; <span id="outputitemCoconut">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Castor Oil</td>
+                                <td>&#8377; 70/200ml</td>
+                                <td><input class="productValues" id="itemCastor" type="number" min="0" value="0" /></td>
+                                <td>&#8377; <span id="outputitemCastor">0</span></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Total</td>
+                                <td id="toatalProdQty">0</td>
+                                <td>&#8377; <span id="toatalProdPrice">0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                <button type="button" id="orderProceed" class="btn btn-primary">Proceed</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pick Order Modal -->
+<div class="modal fade" id="pickOrderModal" tabindex="-1" role="dialog" aria-labelledby="pickOrderModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title pick-modal-head" id="pickOrderModalLabel">Place Orders</h4>
+            </div>
+
+            <form method="post" role="form" >
+                <input type="hidden" name="orderProducts" id="orderProductsDetails">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" name="inputName" placeholder="Enter Your Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputMobNo">Mobile Number</label>
+                        <input type="text" class="form-control" id="inputMobNo" name="inputMobNo" placeholder="Enter Your Mobile Number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputEmail">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Enter Your Email ID">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputComments">Comments</label>
+                        <textarea class="form-control" id="inputComments" name="inputComments" rows="5"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#oderDetailsModal">Back</button>
+                    <button type="submit" class="btn btn-success" data-toggle="modal">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Product benifits -->
+<div class="psroduct-benifits">
+    <h2>Welcome To Urs - Farm Products</h2>
+    <div class="col-sm-6">
+        <div class="col-sm-12 psroduct-benifits-content">
+            <h3>Our Values</h3>
+            <p>URS farm products is founded with a goal to inspire healthy life by providing healthy, authentic and natural food products.
+                We believe the food products we choose have greater impact on our health, community and the environment.
+                That's why all our products are processed with traditional methods and packed with no refining or adulteration to retain nature’s nutrition for a safe and healthy living.
+            </p>
+        </div>
+        <div class="col-sm-12 psroduct-benifits-content">
+            <h3>We Promise</h3>
+            <ul>
+                <li>
+                    • Always Healthy and Natural Products
+                </li>
+                <li>
+                    • Highest quality products at affordable prices
+                </li>
+                <li>
+                    • Commitment to sustainability
+                </li>
+                <li>
+                    • Support to Farming Community
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="col-sm-12 psroduct-benifits-content">
+            <h3>Chekku OIL</h3>
+            <p>In modern days oil is extracted using iron machines and pulp is heated under pressure. This results in losing original nutrition & flavor’s due to excess heat generation (230F).  We use ancient technique (wooden & stone chekku) and by which oil is not heated during manufacturing process (maintained less than 120F), hence it contains the original nutrition and flavors. Also our cold-pressed oil is not refined. It is also rich in antioxidants, which boosts immunity.</p>
+        </div>
+        <div class="col-sm-12 psroduct-benifits-content">
+            <h3>BENEFITS OF COLD PRESSED OIL/CHEKKU OIL</h3>
+            <ul>
+                <li>
+                    • Chekku oil retains healthy anti-oxidants that are otherwise destroyed by heat and these anti-oxidants prevents the growth of tumours.
+                </li>
+                <li>
+                    • At low temperatures, the fatty acid bonds in the groundnut are retained, by which this keeps its heart protecting abilities intact, along with vitamins and mineral.
+                </li>
+                <li>
+                    • Cold pressing eliminates all the harmful effects that arise from the conventional methods of oil extraction.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Carousel -->
+<div class="col-sm-12 app-carousel">
+    <h2>Our Products</h2>
+    <div id="appCarousel" class="carousel slide col-sm-8 col-sm-offset-2 zero-padding" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#appCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#appCarousel" data-slide-to="1"></li>
+            <li data-target="#appCarousel" data-slide-to="2"></li>
+            <li data-target="#appCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item app-carousel-img-wrap active">
+                <img src="../../assets/img/Sesame-Oil.jpg" alt="Sesame Oil">
+                <div class="carousel-caption">
+                    <h3>Sesame Oil</h3>
+                </div>
+            </div>
+
+            <div class="item app-carousel-img-wrap">
+                <img src="../../assets/img/Peanut-Oil.jpg" alt="Peanut Oil">
+                <div class="carousel-caption">
+                    <h3>Peanut Oil</h3>
+                </div>
+            </div>
+
+            <div class="item app-carousel-img-wrap">
+                <img src="../../assets/img/coconut-oil.jpg" alt="Coconut Oil">
+                <div class="carousel-caption">
+                    <h3>Coconut Oil</h3>
+                </div>
+            </div>
+            <div class="item app-carousel-img-wrap">
+                <img src="../../assets/img/Castor-Oil.jpg" alt="Castor Oil">
+                <div class="carousel-caption">
+                    <h3>Castor Oil</h3>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#appCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#appCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<!-- product description -->
+<div class="col-sm-12 product-description">
+    <h2>Product Details</h2>
+    <div class="panel-group col-sm-8 col-sm-offset-2 app-accordion zero-padding" id="appAccordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#appAccordion" href="#collapse1">Sesame Oil</a>
+                </h4>
+            </div>
+            <div id="collapse1" class="panel-collapse collapse in">
+                <div class="panel-body">Sesame oil is also called gingelly oil. Sesame oil is an edible oil derived from sesame seeds. The nature of sesame oil is "Satvic", meaning pure Sesame has one of the highest oil contents of any seed.  Sesame oil possess rich and nutty flavor.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#appAccordion" href="#collapse2">Peanut Oil</a>
+                </h4>
+            </div>
+            <div id="collapse2" class="panel-collapse collapse">
+                <div class="panel-body">Peanut is also known as goober, pinder, groundnut, earthnut and ground pea. Groundnut oil is natural sweet and flavored edible oil. Refined Groundnut oil has a light yellow color and a neutral taste. This is extracted from pressing groundnut kernels. In addition to extracting the oil, groundnuts are eaten raw or roasted, and used in cooking and bakery as well.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#appAccordion" href="#collapse3">Coconut Oil</a>
+                </h4>
+            </div>
+            <div id="collapse3" class="panel-collapse collapse">
+                <div class="panel-body">Coconut oil, or copra oil, is an edible oil extracted from the kernel or meat of mature coconuts harvested from the coconut palm. It has various applications. Because of its high saturated fat content, it is slow to oxidize.</div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#appAccordion" href="#collapse4">Castor Oil</a>
+                </h4>
+            </div>
+            <div id="collapse4" class="panel-collapse collapse">
+                <div class="panel-body">Castor oil is a vegetable oil obtained by pressing the seeds of the castor oil plant (Ricinus communis).The common name "castor oil", from which the plant gets its name, probably comes from its use as a replacement for castoreum, a perfume base made from the dried perineal glands of the beaver </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col-xs-12 contact-us-wrap" id="contactusId">
+    <h2>Contact Us</h2>
+    <p>Have any questions? Feel free to get in touch with us.</p>
+    <!-- contact details -->
+    <div class="col-sm-8 col-sm-offset-2 contact-details">
+        <h3>Media Requests:</h3>
+        <p>ursfarmproducts@gmail.com</p>
+        <h3>Mobile Number:</h3>
+        <p>+91 - 9731233633 / 7795077665</p>
+    </div>
+</div>
+
+<!-- app footer -->
+<div class="app-footer">
+    <div class="col-sm-2 col-xs-6 app-footer-rights">
+        <p>&copy; All rights reserved.</p>
+    </div>
+    <div class="col-sm-10 col-xs-6 app-footer-icon">
+        <a href=""><span class="icon-facebook"></span></a>
+        <a href="https://www.youtube.com/watch?v=xeeOohjVy1c" target="_blank"><span class="icon-youtube"></span></a>
+    </div>
+</div>
+	
