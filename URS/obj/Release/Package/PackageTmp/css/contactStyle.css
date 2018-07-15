@@ -1,0 +1,21 @@
+div.app-body-wrap{
+	clear:both;
+}
+
+.app-body-wrap h2{
+	font-size: 1.5em;
+    font-weight: bold;
+    padding: 0em 1em;
+}
+
+div.contact-details h3,div.contact-details p{
+	margin-bottom: 1em;
+	padding: 0em 1.5em;
+}
+
+div.contact-details h3{
+	font-size: 1em;
+	font-weight: bold;
+	font-family: cursive, sans-serif;
+}
+

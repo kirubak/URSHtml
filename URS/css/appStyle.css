@@ -1,0 +1,300 @@
+/*********Scrollbar*******************/
+body *::-webkit-scrollbar{
+   width: 7px;
+   border-radius: 2em;
+
+}
+ 
+body *::-webkit-scrollbar-thumb{
+}
+ 
+body *::-webkit-scrollbar-thumb{
+    background-color: #afafaf;
+    outline: 1px solid #eaeaea;
+    border-radius: 2em;
+}
+
+/*Error info*/
+.app-price-err{
+    font-size: 0.9em;
+    color: #ff0000;
+}
+
+/*App style*/
+
+
+div.navbar-fixed-top{
+	position: relative;
+}
+
+nav.app-header{
+    border-color: #12c7a7;
+    border-radius: 0em 0em 0.5em 0.5em !important;
+    background: rgba(0, 121, 107, 0.08);
+    position: absolute;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(239, 214, 180, 0.84);
+    z-index: 20;
+}
+
+div.app-head-wrap::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+a.logo-wrap{
+	box-sizing: content-box;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.logo-img{
+	width: 4em;
+}
+
+.app-nav-wrap{
+	padding-top: 2em;
+}
+
+div.banner-wrap{
+	position: relative;
+}
+
+.banner-img{
+	width: 100%;
+    filter: blur(4px);
+    z-index: 10;
+}
+
+.app-nav-wrap li a{
+	color: #fff !important;
+    padding: 0.7em;
+    margin: 0em 1em;
+    border: 1px solid transparent;
+    margin-bottom: 1em;	
+}
+
+.app-nav-wrap li a.active,
+.app-nav-wrap li a:hover, .app-nav-wrap li a:focus{
+	outline: none;
+    border: 1px solid;
+    border-radius: 1em;
+}
+
+button.pick-head-btn,button.pick-head-btn:hover,button.pick-head-btn:focus{
+	background: #12c7a7;
+    color: white;
+    text-shadow: 0 1px 0 #12c7a7;
+    padding: 0.7em;
+    margin: 0em 1em;
+    border-color: #12c7a7;
+}
+
+button.pick-head-btn:hover,button.pick-head-btn:focus{
+    border-color: #fff;
+    outline: none;
+}
+
+div.banner-content{
+	position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    text-align: center;
+}
+
+div.banner-content h1{
+	color: #fff;
+    font-family: cursive, sans-serif;
+    margin-bottom: 1em;
+}
+
+div.banner-content button.pick-head-btn,div.banner-content button.pick-head-btn:hover,div.banner-content button.pick-head-btn:focus{
+	background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-shadow: 0 1px 0 #fff;
+    padding: 0.7em;
+    margin: 0em 1em;
+    border-color: #fff;
+}
+
+div.banner-content button.pick-head-btn:hover,button.pick-head-btn:focus{
+    border-color: #fff;
+    background: #12c7a7;
+    outline: none;
+}
+
+div.banner-content h1{
+	color: #ffffff;
+    font-family: cursive, sans-serif;
+    margin-bottom: 1em;
+    text-shadow: 3px 1px #284c3a;
+}
+
+h4.pick-modal-head{
+	text-align: center;
+    color: #096454;
+    font-size: 2em;
+    font-family: cursive,sans-serif,serif;
+    font-weight: bold;
+}
+
+span.head-heart{
+	color: #ff6113;
+	text-shadow: 2px 1px #87208e;
+}
+
+/*Product benifits*/
+.psroduct-benifits{
+	text-align: center;
+    margin-bottom: 2em;
+}
+
+.psroduct-benifits::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.psroduct-benifits h2,div.app-carousel h2,div.product-description h2,
+div.contact-us-wrap h2{
+	font-family: cursive, sans-serif;
+    margin: 1em 0em;
+    font-size: 2em;
+    color: #01735f;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+div.psroduct-benifits-content h3{
+    color: #2e6da4;
+    font-family: cursive, sans-serif;
+    border-bottom: 2px solid;
+    padding-bottom: 0.2em;
+    border-color: rgb(46, 109, 164);
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+div.psroduct-benifits-content p{
+	padding: 0em;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+/*app carousel*/
+
+div.app-carousel{
+    text-align: center;
+    padding: 0 2em;
+    margin-bottom: 3em;
+}
+
+.app-carousel-img-wrap img{
+    width: 100%;
+    height: 34em !important;
+}
+
+/*app footer*/
+.app-footer{
+    clear: both;
+    margin-top: 2em;
+}
+
+.app-footer-icon a{
+    color: #337ab7;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 6px;
+    border-radius: 50%;
+    margin-left: 2em;
+}
+
+.app-footer-icon a:first-child{
+    margin-left: 0em;
+}
+
+.app-footer-icon a:last-child{
+    margin-right: 0em;
+}
+
+.app-footer-icon a:hover,.app-footer-icon a:focus{
+    color: #0baf92;
+}
+
+/*app details*/
+div.product-description{
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+div.app-accordion .panel-default .panel-heading{
+    background: #3970a0;
+    padding: 0;
+}
+
+div.app-accordion .panel-default .panel-heading h4{
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+div.app-accordion .panel-default .panel-heading a{
+    padding: 1em;
+    display: block;
+}
+
+/*app table*/
+
+div.app-price-table-wrap table thead tr th{
+    font-weight: bold;
+}
+
+div.app-price-table-wrap table tbody tr td input[type="number"]{
+    margin-left: 1px;
+    width: 4em;
+}
+
+/*contact us */
+
+div.contact-us-wrap{
+    clear:both;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+div.contact-us-wrap h3{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 0em 1em;
+}
+
+div.contact-details h3,div.contact-details p{
+    margin-bottom: 1em;
+    padding: 0em 1.5em;
+}
+
+div.contact-us-wrap>p,
+div.contact-details h3{
+    font-size: 1em;
+    font-weight: bold;
+    font-family: cursive, sans-serif;
+}
+
+/*modal color chanages*/
+
+.modal-header {
+    border-bottom: 1px solid rgba(21, 156, 132, 0.62);
+}
+
+.modal-footer{
+    border-top: 1px solid rgba(21, 156, 132, 0.62);
+}
+
+ol, ul {
+    text-align: left;
+}
